@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Number Game</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Secret Number Game</h1>
+    <p>Can you guess my favorite number correctly?</p>
+
+    <script>
+        let secretNumber = 4;
+
+        let points = 0;
+
+        let guess = prompt("Hello friend! Try to guess my favorite number from 1 to 5! Think you can answer correctly on the first try?");
+
+        while (isNaN(guess)) {
+            guess = prompt("I'm sorry, that is not a number. Please enter a number between 1 and 5.");
+        }
+
+        guess = Number(guess);
+
+        if (guess === secretNumber) {
+            points = 10;
+            alert("Correct! You earned " + points + " points! Great job and thanks for playing!");
+        } else {
+            alert("I'm sorry, that was not it. You earned " + points + " points.");
+        }
+    </script>
+
+</body>
+</html>
