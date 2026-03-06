@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia Quiz Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to external JavaScript file -->
+    <script src="trivia.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #score {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Trivia Quiz</h1>
+    <p>Answer each question. You get 3 tries per question.</p>
+
+    <div id="score"></div>
+
+    <script>
+        var finalScore = quiz();
+
+        document.getElementById("score").innerHTML =
+            "Your final score is: " + finalScore + " points.";
+    </script>
+
+</body>
+</html>
